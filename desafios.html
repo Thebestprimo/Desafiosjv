@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <tittle>Desafio 1</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<tittle>Desafio 1</title>
     <script>
         var nome = prompt("Insira seu nome!");
         var saudacao = "Como estamos" + " " + nome + "?";
         alert(saudacao);
+    </script> -->
+
+    <tittle>Desafio 2</tittle>
+    <script>
+      var somar = (a, b) => a + b;
+      var calcularICMS = (x) => x * 0.3;
+
+      var precoProduto = 80;
+
+      var icms = calcularICMS(precoProduto);
+      var soma = somar(precoProduto, icms);
+
+      console.log(soma);
     </script>
-</head>
+  </head>
 </html>
