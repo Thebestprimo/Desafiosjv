@@ -10,7 +10,7 @@
         alert(saudacao);
     </script> -->
 
-    <tittle>Desafio 2</tittle>
+    <!--<tittle>Desafio 2</tittle>
     <script>
       var somar = (a, b) => a + b;
       var calcularICMS = (x) => x * 0.3;
@@ -21,6 +21,38 @@
       var soma = somar(precoProduto, icms);
 
       console.log(soma);
+    </script>-->
+    <title>Tarefa 3</title>
+    <script>
+      function simularEmprestimo(principal, taxaDeJuros, numeroDeParcelas) {
+        const parcelas = [];
+        let saldoRestante = principal;
+
+        for (let i = 0; i < numeroDeParcelas; i++) {
+          const juros = saldoRestante * (taxaDeJuros / 100);
+          const pagamento = saldoRestante / numeroDeParcelas + juros;
+          saldoRestante -= principal / numeroDeParcelas;
+
+          parcelas.push(pagamento);
+        }
+
+        return parcelas;
+      }
+
+      const principal = 10000; // Valor principal do empréstimo
+      const taxaDeJuros = 5; // Taxa de juros anual em porcentagem
+      const numeroDeParcelas = 12; // Número de parcelas
+
+      const parcelas = simularEmprestimo(
+        principal,
+        taxaDeJuros,
+        numeroDeParcelas
+      );
+
+      console.log("Valor das parcelas decrescentes:");
+      for (let i = 0; i < parcelas.length; i++) {
+        console.log(`Parcela ${i + 1}: R$ ${parcelas[i].toFixed(2)}`);
+      }
     </script>
   </head>
 </html>
