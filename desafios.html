@@ -22,7 +22,8 @@
 
       console.log(soma);
     </script>-->
-    <title>Tarefa 3</title>
+
+    <!--<title>Desafio 3</title>
     <script>
       function simularEmprestimo(principal, taxaDeJuros, numeroDeParcelas) {
         const parcelas = [];
@@ -53,6 +54,37 @@
       for (let i = 0; i < parcelas.length; i++) {
         console.log(`Parcela ${i + 1}: R$ ${parcelas[i].toFixed(2)}`);
       }
+    </script> -->
+
+    <title>Desafio 4</title>
+    <script>
+      function fruta(nome, cor, tamanho, venenosa) {
+        this.nome = nome;
+        this.cor = cor;
+        this.tamanho = tamanho;
+        this.venenosa = venenosa;
+        this.falar = function () {
+          console.log(
+            "Essa fruta: " +
+              this.nome +
+              " | " +
+              "tem o tamanho: " +
+              this.tamanho +
+              " | " +
+              "é da cor: " +
+              this.cor +
+              " | " +
+              "é venenosa?: " +
+              this.venenosa
+          );
+        };
+      }
+
+      const frutaBoa = new fruta("Laranja", "Laranja", "Medio", "Não");
+      const frutaRuim = new fruta("Mancenilheira", "Verde", "Pequeno", "Sim");
+
+      frutaBoa.falar();
+      frutaRuim.falar();
     </script>
   </head>
 </html>
